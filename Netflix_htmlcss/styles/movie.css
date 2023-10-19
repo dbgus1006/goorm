@@ -1,0 +1,39 @@
+.thumbnail-row {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.thumbnail-row:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+
+.movie-row {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.movie-row::-webkit-scrollbar {
+    display: none;
+}
+
+.LargeThumbnail {
+    object-fit: contain;
+    max-height: 300px;
+}
+
+.LargeThumbnail:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+.menu-row {
+    color: white;
+    margin-left: 20px;
+}

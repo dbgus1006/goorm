@@ -1,0 +1,26 @@
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    padding: 20px;
+    z-index: 1;
+
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
+
+.top__logo {
+    width: 100px;
+    object-fit: contain;
+}
+
+.profile__picture {
+    width: 24px;
+    object-fit: contain;
+}
+
+.top__black {
+    background-color: black;
+}
