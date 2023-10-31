@@ -5,49 +5,49 @@ class UI {
 
     showProfile(user) {
         const userDp = user.avatar_url,
-            name = user.name || "No Name Provided",
-            username = user.login,
-            viewProfile = user.html_url,
-            pubRepos = user.public_repos,
-            pubGists = user.public_gists,
-            followers = user.followers,
-            following = user.following,
-            company = user.company || "Not Provided",
-            website = user.blog || "Not Provided",
-            websiteUrl = website === "Not Provided" ? "" : website,
-            location = user.location || "Not Provided",
-            profileCreated = new Date(user.created_at).toDateString();
-
-          this.profile.innerHTML = `
-          <div class="card card-body mb-3">
-              <div class="row">
-                  <div class="col-md-3 text-center">
-                      <img class="img-fluid mb-2" src="${userDp}">
-                  <div class="name">
-                      <strong>${name}</strong><br>
-                  </div>
-                  <div class="mb-2">${username}</div>
-                  <a href="${viewProfile}" target="_blank" class="btn btn-primary btn-block mb-4">View Profile</a>
-                  </div>
-                  <div class="col-md-9">
-                  <span class="badge badge-primary mb-2">Public Repos: ${pubRepos}</span>
-                  <span class="badge badge-secondary mb-2">Public Gists: ${pubGists}</span>
-                  <span class="badge badge-success mb-2">Followers: ${followers}</span>
-                  <span class="badge badge-info mb-2">Following: ${following}</span>
-                  <br><br>
-                  <ul class="list-group">
-                  <li class="list-group-item">Company: ${company}
-                  <li class="list-group-item">Website/Blog: <a href="${websiteUrl}" target="_blank">${website}</a>
-                  <li class="list-group-item">Location: ${location}
-                  <li class="list-group-item">Member since: ${profileCreated}
-                  </ul>
-                  </div>
-              </div>
-          </div>
-          <h3 class="page-heading mb-3 ml-3" style="color: rgb(57, 113, 209)">Latest Repositories</h3>
-          <div id="repos"></div>
-          `;
-    }
+          name = user.name || "No Name Provided",
+          username = user.login,
+          viewProfile = user.html_url,
+          pubRepos = user.public_repos,
+          pubGists = user.public_gists,
+          followers = user.followers,
+          following = user.following,
+          company = user.company || "Not Provided",
+          website = user.blog || "Not Provided",
+          websiteUrl = website === "Not Provided" ? "" : website,
+          location = user.location || "Not Provided",
+          profileCreated = new Date(user.created_at).toDateString();
+    
+        this.profile.innerHTML = `
+            <div class="card card-body mb-3">
+                <div class="row">
+                    <div class="col-md-3 text-center">
+                        <img class="img-fluid mb-2" src="${userDp}">
+                    <div class="name">
+                        <strong>${name}</strong><br>
+                    </div>
+                    <div class="mb-2">${username}</div>
+                    <a href="${viewProfile}" target="_blank" class="btn btn-primary btn-block mb-4">View Profile</a>
+                    </div>
+                    <div class="col-md-9">
+                    <span class="badge badge-primary mb-2">Public Repos: ${pubRepos}</span>
+                    <span class="badge badge-secondary mb-2">Public Gists: ${pubGists}</span>
+                    <span class="badge badge-success mb-2">Followers: ${followers}</span>
+                    <span class="badge badge-info mb-2">Following: ${following}</span>
+                    <br><br>
+                    <ul class="list-group">
+                    <li class="list-group-item">Company: ${company}
+                    <li class="list-group-item">Website/Blog: <a href="${websiteUrl}" target="_blank">${website}</a>
+                    <li class="list-group-item">Location: ${location}
+                    <li class="list-group-item">Member since: ${profileCreated}
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <h3 class="page-heading mb-3 ml-3" style="color: rgb(57, 113, 209)">Latest Repositories</h3>
+            <div id="repos"></div>
+            `;
+      }
 
     clearProfile() {
         document.querySelector("footer").style.position = "fixed";
